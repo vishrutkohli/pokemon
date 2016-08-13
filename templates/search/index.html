@@ -1,0 +1,70 @@
+{% extends "search/base.html" %}
+
+{% block head %}
+	<title> {{date}} </title>
+	<style type="text/css">
+		img{
+			width: 300px;	
+		}
+	</style>
+{% endblock head %}
+
+
+{% block content %}
+	
+	<!-- <img src='static/images/{{list_dir.0}}'> -->
+	
+	{% for item in list_dir %}
+		<!-- <a href='static/images/{{item}}'>{{item}}</a> -->
+	{% endfor %}
+
+	<!-- <code>	
+		{{list_dir}}
+	</code> -->
+
+	<div class='row'>
+
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.0}}'>
+		</div>
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.2}}'>
+		</div>
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.3}}'>
+		</div>
+
+	</div><br>
+
+	<div class='row'>
+		
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.4}}'>
+		</div>
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.5}}'>
+		</div>
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.6}}'>
+		</div>
+
+	</div><br>
+
+	<div class='row'>
+		
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.7}}'>
+		</div>
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.8}}'>
+		</div>
+		<div class="col-md-4">
+			<img src='static/images/{{list_dir.9}}'>
+		</div>
+
+	</div>
+
+
+
+{% endblock content %}
+
