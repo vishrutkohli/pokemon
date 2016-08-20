@@ -12,7 +12,9 @@
 
 {% block form %}
 
-	<form class="navbar-form navbar-left" method='GET' action='/searchGET'>
+	<form class="navbar-form navbar-left" method='POST' action='/searchPOST'>
+		
+		{% csrf_token %}
 
 	  <div class="form-group">
 	    <input type="text" name='searchstring' class="form-control" placeholder="Search">
@@ -31,16 +33,11 @@
 
 	<p>Results:</p>
 
-	{% for key,value in result_arr2 %}
+	{% for key,value in result_arr %}
 		<p>{{key}}</p>
 		<img src='{{value}}'>
 	{% endfor %}
 
-	
-	<br>
-	<code>
-		{{result_arr}}
-	</code>
 
 {% endblock content %}
 

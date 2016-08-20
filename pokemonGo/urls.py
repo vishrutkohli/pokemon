@@ -11,9 +11,10 @@ urlpatterns = patterns('',
     #url(r'^pokemon$', 'search.views.index', name = 'index'),
     url(r'^random$', 'search.views.random', name = 'random'),
     url(r'^searchGET$', 'search.views.srchget', name = 'search'),
+    url(r'^searchPOST$', 'search.views.srchpost', name = 'searchPOST'),
     #un-named grouping
     #url(r'^search/(\d+)', 'search.views.srch2', name = 'search2'),
     #named-grouping
     #url(r'^search/(?P<foo>\d+)', 'search.views.srch2', name = 'search2'),
-    #url(r'^search/(?P<article_id>[\w\-]+)/$', 'search.views.random', name = 'random'),
+    url(r'^searchREDIRECT/(?P<search_string>[\w\-]+)/$', 'search.views.srchredirect', name = 'searchredirect'),
 )
