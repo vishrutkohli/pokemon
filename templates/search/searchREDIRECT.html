@@ -4,7 +4,7 @@
 	<title> {{date}} </title>
 	<style type="text/css">
 		img{
-			width: 60px;	
+			width: 150px;	
 		}
 	</style>
 {% endblock head %}
@@ -30,10 +30,12 @@
 
 	<p>Results:</p>
 
-	{% for key,value in result_arr %}
-		<p>{{key}}</p>
-		<img src='{{value}}'>
+	{% for item in result_arr %}
+		<p>{{item.name}}</p>
+		<img src='{{item.image_url}}'>
 	{% endfor %}
+
+
 {% endblock content %}
 
 

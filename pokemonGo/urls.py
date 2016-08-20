@@ -16,5 +16,5 @@ urlpatterns = patterns('',
     #url(r'^search/(\d+)', 'search.views.srch2', name = 'search2'),
     #named-grouping
     #url(r'^search/(?P<foo>\d+)', 'search.views.srch2', name = 'search2'),
-    url(r'^searchREDIRECT/(?P<search_string>[\w\-]+)/$', 'search.views.srchredirect', name = 'searchredirect'),
+    url(r'^searchREDIRECT/(?P<search_string>[\*\w\-]+)/$', 'search.views.srchredirect', name = 'searchredirect'),
 )
