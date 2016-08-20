@@ -25,9 +25,9 @@ def srch2(request, foo):
 	
 	return render(request,'search/search.html',context_dict)
 
-def srch(request):
-	search_string = request.GET.get("text") or ''
-	print type(search_string)
+def srchget(request):
+	search_string = request.GET.get("searchstring") or ''
+	
 	search_string = str(search_string)
 
 	list_dir = os.listdir(os.path.join(settings.STATIC_PATH,'images'))
