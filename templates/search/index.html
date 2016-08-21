@@ -16,7 +16,7 @@
 {% for pokemon in pokedex %}
 	<p>{{pokemon.pokemon_name}} : 
 		type {{pokemon.pokemon_type}}</p>
-<img src='static/images/{{pokemon.pokemon_image}}'>	
+<img src='{{pokemon.pokemon_image}}'>	
 {% endfor %}
 
 

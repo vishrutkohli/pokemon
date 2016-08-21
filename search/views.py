@@ -75,11 +75,8 @@ def index(request):
 	context_dict = {}
 	context_dict['date'] = today_date
 
-	list_dir = os.listdir(os.path.join(settings.STATIC_PATH,
-		'images'))
-	shuffle(list_dir)
 
-	context_dict['list_dir'] = list_dir
+	
 	context_dict['pokedex'] = Pokedex.objects.all()
 	
 	return render(request,'search/index.html',context_dict)
