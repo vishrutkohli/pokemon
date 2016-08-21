@@ -37,8 +37,8 @@ def search_pokemon(search_string,result_type='arr'):
 
 def srchlistjs(request):
 	context_dict = {}
-	context_dict['search_string'] = search_string
-	context_dict['result_arr'] = search_pokemon(search_string,
+	
+	context_dict['result_arr'] = search_pokemon("*",
 		result_type='dict')
 	
 	return render(request,'search/searchLISTJS.html',context_dict)
